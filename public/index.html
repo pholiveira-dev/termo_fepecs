@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerador de Termo</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <div class="tag">TERMO DE COMPROMISSO</div>
+      <h1>Gerador de termo em PDF</h1>
+      <p class="subtitle">
+        Preencha os dados abaixo para gerar o termo já com nome em maiúsculas e semestre correto.
+      </p>
+
+      <form id="termoForm" class="form">
+        <div class="field">
+          <label for="nomeCompleto">Nome completo</label>
+          <input
+            type="text"
+            id="nomeCompleto"
+            name="nomeCompleto"
+            placeholder="Digite o nome completo"
+            autocomplete="name"
+            required
+          />
+          <small>O sistema converterá o nome automaticamente para MAIÚSCULAS.</small>
+        </div>
+
+        <div class="field">
+          <label for="semestre">Semestre</label>
+          <select id="semestre" name="semestre" required>
+            <option value="">Selecione</option>
+            <option value="7º SEMESTRE">7º SEMESTRE</option>
+            <option value="8º SEMESTRE">8º SEMESTRE</option>
+          </select>
+        </div>
+
+        <button type="submit" id="submitBtn">Gerar termo</button>
+      </form>
+
+      <div id="mensagem" class="mensagem" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="/script.js"></script>
+</body>
+</html>
