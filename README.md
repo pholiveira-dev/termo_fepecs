@@ -96,14 +96,4 @@ Body JSON:
   "nomeCompleto": "PEDRO HENRIQUE DE OLIVEIRA ALVES",
   "semestre": "8º SEMESTRE"
 }
-```
-
-## Próximo passo recomendado
-
-Antes de colocar em produção, teste com:
-
-- um nome curto
-- um nome médio
-- um nome bem longo
-
-para confirmar se a paginação continua exatamente com 3 páginas em todos os casos.
+``
