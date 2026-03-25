@@ -1,50 +1,116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gerador de Termo</title>
-  <link rel="stylesheet" href="/styles.css" />
-</head>
-<body>
-  <main class="container">
-    <section class="card">
-      <div class="tag">TERMO DE COMPROMISSO</div>
-      <h1>Gerador de termo em PDF</h1>
-      <p class="subtitle">
-        Preencha os dados abaixo para gerar o termo já com nome em maiúsculas e semestre correto.
-      </p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador de Termo</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-grid"></div>
 
-      <form id="termoForm" class="form">
-        <div class="field">
-          <label for="nomeCompleto">Nome completo</label>
-          <input
-            type="text"
-            id="nomeCompleto"
-            name="nomeCompleto"
-            placeholder="Digite o nome completo"
-            autocomplete="name"
-            required
-          />
-          <small>O sistema converterá o nome automaticamente para MAIÚSCULAS.</small>
-        </div>
+    <main class="container">
+      <section class="hero-card">
+        <aside class="hero-panel">
+          <div class="brand">
+            <div class="brand-badge">
+              <img src="/images/logo_udf.png" />
+            </div>
+            <div>
+              <p class="brand-label">Preceptoria de Enfermagem</p>
+              <h2>Gerador de Termo - TCE FEPECS</h2>
+            </div>
+          </div>
 
-        <div class="field">
-          <label for="semestre">Semestre</label>
-          <select id="semestre" name="semestre" required>
-            <option value="">Selecione</option>
-            <option value="7º SEMESTRE">7º SEMESTRE</option>
-            <option value="8º SEMESTRE">8º SEMESTRE</option>
-          </select>
-        </div>
+          <p class="hero-text">
+            Gere automaticamente o termo com nome em maiúsculas e semestre
+            padronizado, com uma interface simples, profissional e pronta para
+            uso.
+          </p>
 
-        <button type="submit" id="submitBtn">Gerar termo</button>
-      </form>
+          <div class="hero-features">
+            <div class="feature-chip">Preenchimento rápido</div>
+            <div class="feature-chip">Nome em MAIÚSCULAS</div>
+            <div class="feature-chip">Exportação em PDF</div>
+          </div>
 
-      <div id="mensagem" class="mensagem" aria-live="polite"></div>
-    </section>
-  </main>
+          <div class="hero-status">
+            <span class="status-dot"></span>
+            Sistema pronto para geração de documentos
+          </div>
+        </aside>
 
-  <script src="/script.js"></script>
-</body>
+        <section class="card">
+          <div class="tag">TERMO DE COMPROMISSO</div>
+
+          <h1>Gerar documento</h1>
+          <p class="subtitle">
+            Preencha os dados abaixo para gerar o termo com formatação
+            padronizada.
+          </p>
+
+          <form id="termoForm" class="form">
+            <div class="field">
+              <label for="nomeCompleto">Nome completo</label>
+              <div class="input-shell">
+                <input
+                  type="text"
+                  id="nomeCompleto"
+                  name="nomeCompleto"
+                  placeholder="Digite o nome completo"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+              <small
+                >O sistema converterá o nome automaticamente para
+                MAIÚSCULAS.</small
+              >
+            </div>
+
+            <div class="field">
+              <label for="semestre">Semestre</label>
+              <div class="input-shell">
+                <select id="semestre" name="semestre" required>
+                  <option value="">Selecione</option>
+                  <option value="7º SEMESTRE">7º SEMESTRE</option>
+                  <option value="8º SEMESTRE">8º SEMESTRE</option>
+                </select>
+              </div>
+            </div>
+
+            <button type="submit" id="submitBtn" class="submit-btn">
+              <span class="btn-text">Gerar termo</span>
+              <span class="btn-loader" aria-hidden="true"></span>
+            </button>
+          </form>
+
+          <div id="mensagem" class="mensagem" aria-live="polite"></div>
+
+          <div
+            id="loadingBox"
+            class="loading-box"
+            aria-live="polite"
+            aria-hidden="true"
+          >
+            <div class="loading-top">
+              <div class="loading-spinner"></div>
+              <div>
+                <strong>Gerando documento...</strong>
+                <p>Estamos preparando o seu PDF. Aguarde alguns instantes.</p>
+              </div>
+            </div>
+
+            <div class="loading-progress">
+              <div class="loading-bar"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="/script.js"></script>
+  </body>
 </html>
