@@ -1,15 +1,20 @@
 {
+  "homepage": "https://pholiveira-dev.github.io/termo_fepecs",
   "name": "gerador-termo-js",
   "version": "1.0.0",
   "description": "Gerador de termo de compromisso em PDF com Node.js, Express e Docxtemplater",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node --watch server.js"
+    "dev": "node --watch server.js",
+    "deploy": "gh-pages -d ."
   },
   "dependencies": {
     "docxtemplater": "^3.54.0",
     "express": "^4.21.2",
     "pizzip": "^3.1.8"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
